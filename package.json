@@ -3,9 +3,13 @@
 	"version": "1.0.0",
 	"scripts": {
 		"build:scss": "sass assets/scss/site.scss dist/site.css --style compressed --no-source-map",
-		"build:hbs": "hbs views/index.hbs --data content.json --partial \"views/partials/*.hbs\" --helper \"%cd%/views/helpers/*.js\" --output dist/",
 		"build:js": "browserify assets/js/main.js --outfile dist/bundle.js --plugin=tinyify",
-		"build:static": "xcopy /Y /s static dist",
+		"build:hbs:windows": "hbs views/index.hbs --data content.json --partial \"views/partials/*.hbs\" --helper \"%cd%/views/helpers/*.js\" --output dist/",
+		"build:hbs:default": "hbs views/index.hbs --data content.json --partial 'views/partials/*.hbs' --helper './views/helpers/*.js' --output dist/",
+		"build:hbs": "run-script-os",
+		"build:static:windows": "xcopy /Y /s static dist",
+		"build:static:default": "cp -r static/. dist/",
+		"build:static": "run-script-os",
 		"build": "npm run build:scss && npm run build:js & npm run build:hbs & npm run build:static",
 		"watch": "npm-watch"
 	},
@@ -39,6 +43,7 @@
 		"browserify": "^16.5.1",
 		"hbs-cli": "^1.4.0",
 		"npm-watch": "^0.6.0",
+		"run-script-os": "^1.1.1",
 		"sass": "^1.26.5",
 		"tinyify": "^2.5.2",
 		"uikit": "^3.4.6"
