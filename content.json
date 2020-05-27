@@ -1,0 +1,45 @@
+{
+	"title": "Skayo | Web Designer & Developer from Austria",
+	"job": "Web Designer & Developer",
+	"about": "I am a web designer & developer living in Vienna, Austria and am currently {age} years old. I am always full of ideas and love to create websites, develop new projects or just try things out! I started in 2014, when I got a book about creating websites. Since then I have gained a lot of experience and learned a lot. Nowadays I develop websites on a daily basis and LOVE doing so!\n\nIf you want to know more about me check out my projects and social media!",
+	"email": "contact@skayo.dev",
+	"projects": [
+		{
+			"name": "URL-Shortener",
+			"type": "Website",
+			"link": "https://l.skayo.dev"
+		},
+		{
+			"name": "Toolbox",
+			"type": "Website",
+			"link": "https://tools.skayo.dev"
+		},
+		{
+			"name": "Cockpit",
+			"type": "Library",
+			"link": "https://github.com/Skayo/Cockpit"
+		},
+		{
+			"name": "Cage",
+			"type": "Craft CMS Plugin",
+			"link": "https://plugins.craftcms.com/cage"
+		}
+	],
+	"social": [
+		{
+			"name": "GitHub",
+			"icon": "github",
+			"link": "https://github.com/Skayo"
+		},
+		{
+			"name": "Twitter",
+			"icon": "twitter",
+			"link": "https://twitter.com/Skayo_"
+		},
+		{
+			"name": "Instagram",
+			"icon": "instagram",
+			"link": "https://instagram.com/skayonas"
+		}
+	]
+}

@@ -1,0 +1,61 @@
+{{#> layout }}
+	<div class="uk-cover-container uk-light uk-height-viewport" uk-height-viewport>
+		<img class="uk-cover uk-animation-fade" src="img/Background-Large.jpg" alt="" uk-cover>
+
+		<div class="uk-position-cover uk-overlay uk-overlay-primary uk-flex uk-flex-center">
+			<div class="uk-grid uk-flex-center uk-flex-middle uk-flex-column uk-width-1-3@l uk-width-1-2@m uk-width-1-1 uk-animation-fade" uk-grid>
+				<div class="uk-width-1-3 uk-margin-bottom">
+					<img class="uk-animation-kenburns" src="img/Skayo-Logo.png" alt="Skayo Logo">
+				</div>
+				<div class="uk-width-1-5">
+					<hr class="uk-divider-small">
+				</div>
+				<div class="uk-text-center">
+					<h1 class="sk-spacing uk-heading-medium uk-text-lighter uk-margin-remove">SKAYO</h1>
+					<h4 class="uk-text-muted uk-margin-remove">{{ job }}</h4>
+				</div>
+			</div>
+		</div>
+
+		<div class="uk-position-bottom-center uk-position-medium uk-position-z-index uk-text-center">
+			<a class="uk-animation-slide-top-small" href="#content" uk-scroll="duration: 500" uk-icon="icon: arrow-down; ratio: 2"></a>
+		</div>
+	</div>
+
+	<section id="content" class="uk-section uk-flex uk-flex-middle uk-height-viewport" uk-height-viewport>
+		<div class="uk-container uk-container-large uk-margin-top uk-flex uk-flex-middle uk-flex-column">
+			<div class="uk-grid uk-grid-large uk-grid-divider uk-child-width-1-2@l uk-child-width-1-1" uk-grid>
+				<div uk-scrollspy="cls: uk-animation-fade">
+
+					<h1 class="sk-spacing uk-heading-small uk-text-lighter">ABOUT ME</h1>
+					<h3 class="uk-text-muted uk-text-justify">{{{age (nl2br about)}}}</h3>
+
+					<h1 class="sk-spacing uk-heading-small uk-text-lighter uk-margin-large-top uk-margin-remove-bottom">CONTACT ME</h1>
+					<a class="uk-margin-medium-top uk-button uk-button-large uk-button-default" href="mailto:{{email}}" target="_blank">{{email}}</a>
+
+				</div>
+				<div class="uk-text-right@l" uk-scrollspy="cls: uk-animation-fade">
+						<h1 class="sk-spacing uk-heading-small uk-text-lighter uk-margin-remove">MY PROJECTS</h1>
+						<div class="uk-margin-medium-top">
+							{{#each projects}}
+								<h1 class="uk-margin-small">
+									<span id="project-type-{{@index}}" class="uk-text-muted uk-text-small" hidden>{{this.type}}</span>
+									<a class="uk-link" href="{{this.link}}" target="_blank" uk-toggle="target: #project-type-{{@index}}; mode: hover; animation: uk-animation-fade">
+										{{this.name}}
+									</a>
+								</h1>
+							{{/each}}
+						</div>
+				</div>
+			</div>
+
+			<footer class="uk-flex uk-flex-center uk-margin-medium-top" uk-scrollspy="cls: uk-animation-fade">
+				<ul class="uk-iconnav">
+					{{#each social}}
+						<li><a href="{{this.link}}" uk-icon="icon: {{this.icon}}; ratio: 1.5" title="{{this.name}}" target="_blank"></a></li>
+					{{/each}}
+				</ul>
+			</footer>
+		</div>
+	</section>
+{{/layout}}
