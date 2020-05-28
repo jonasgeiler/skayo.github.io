@@ -53,9 +53,9 @@
 				<div class="uk-text-right@l" uk-scrollspy="cls: uk-animation-fade">
 
 					<h1 class="sk-spacing uk-heading-small uk-text-lighter uk-margin-remove">MY PROJECTS</h1>
-					<div class="uk-margin-medium-top">
+					<div class="uk-margin-medium-top" uk-scrollspy="target: .sk-project; cls: uk-animation-slide-left-small; delay: 100">
 						{{#each projects}}
-							<h1 class="uk-margin-small">
+							<h1 class="sk-project uk-margin-small">
 								<span id="project-type-{{@index}}" class="uk-text-muted uk-text-small" hidden>{{this.type}}</span>
 								<a class="uk-link" href="{{this.link}}" target="_blank" uk-toggle="target: #project-type-{{@index}}; mode: hover; animation: uk-animation-fade" title="Go to site">
 									{{this.name}}
