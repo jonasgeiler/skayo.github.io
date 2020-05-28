@@ -5,4 +5,13 @@
 	letter-spacing: 5px;
 }
 
+.sk-project-type {
+	opacity: 0;
+	transition: opacity .2s linear;
+}
+
+.sk-project-title:hover + .sk-project-type {
+	opacity: 1;
+}
+
 @import "../../node_modules/uikit/src/scss/uikit-theme.scss";
