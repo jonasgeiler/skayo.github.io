@@ -6,10 +6,10 @@
 		"build:js": "browserify assets/js/main.js --outfile dist/bundle.js --plugin=tinyify",
 		"build:hbs:windows": "hbs views/index.hbs --data content.json --partial \"views/partials/*.hbs\" --helper \"%cd%/views/helpers/*.js\" --output dist/",
 		"build:hbs:default": "hbs views/index.hbs --data content.json --partial \"views/partials/*.hbs\" --helper \"$(pwd)/views/helpers/*.js\" --output dist/",
-		"build:hbs": "run-script-os",
-		"build:static:windows": "xcopy /Y /s static dist",
+		"build:hbs": "run-script-os --no-arguments",
+		"build:static:windows": "xcopy /Y /S static dist",
 		"build:static:default": "cp -r static/. dist/",
-		"build:static": "run-script-os",
+		"build:static": "run-script-os --no-arguments",
 		"build": "npm run build:scss && npm run build:js & npm run build:hbs & npm run build:static",
 		"watch": "npm-watch"
 	},
