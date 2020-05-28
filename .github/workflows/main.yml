@@ -18,8 +18,8 @@ jobs:
       run: npm install
     - name: Build 🏗
       run: npm run build
-    - name: Cleanup 🚮
-      run: rm dist/bundle.js.*
+#    - name: Cleanup 🚮
+#      run: rm dist/bundle.js.*
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@3.5.3
       with:
