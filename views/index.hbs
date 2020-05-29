@@ -2,7 +2,7 @@
 name: Skayo
 job: Web Designer & Developer
 fromCountry: from Austria
-age: 18
+age: '18'
 email: contact@skayo.dev
 
 about: |-
@@ -79,7 +79,7 @@ social:
 						<div uk-scrollspy="cls: uk-animation-fade">
 							<h1 class="sk-spacing uk-heading-small uk-text-lighter">ABOUT ME</h1>
 							<p class="uk-text-muted uk-h4 uk-text-justify uk-margin-medium-top">
-								{{{replace (replace (replace about "{age}" age) "{job}" (lowercase job)) "\n" "<br>"}}}
+								{{breaklines (replace (replace about "{age}" age) "{job}" (lowercase job))}}
 							</p>
 						</div>
 
