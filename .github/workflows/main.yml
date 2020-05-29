@@ -28,3 +28,4 @@ jobs:
         FOLDER: dist
         GIT_CONFIG_NAME: SkayoBot
         GIT_CONFIG_EMAIL: frederike.gnampf@gmail.com
+        CLEAN: true

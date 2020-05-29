@@ -3,7 +3,7 @@
 	"version": "1.0.0",
 	"scripts": {
 		"dev": "parcel views/index.hbs --no-cache",
-		"build": "parcel build views/index.hbs --no-source-maps --no-cache --no-content-hash"
+		"build": "parcel build views/index.hbs --no-source-maps --no-cache"
 	},
 	"dependencies": {
 		"uikit": "^3.5.1"
