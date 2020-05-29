@@ -3,7 +3,7 @@
 	"version": "1.0.0",
 	"scripts": {
 		"build:scss": "sass assets/scss/site.scss dist/site.css --style compressed --no-source-map",
-		"build:js": "browserify assets/js/main.js --outfile dist/bundle.js --plugin=tinyify",
+		"build:js": "browserify assets/js/main.js --plugin=tinyify > dist/bundle.js",
 		"build:hbs:windows": "hbs views/index.hbs --data content.json --partial \"views/partials/*.hbs\" --helper \"%cd%/views/helpers/*.js\" --output dist/",
 		"build:hbs:default": "hbs views/index.hbs --data content.json --partial \"views/partials/*.hbs\" --helper \"$(pwd)/views/helpers/*.js\" --output dist/",
 		"build:hbs": "run-script-os --no-arguments",
