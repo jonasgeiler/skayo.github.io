@@ -1,0 +1,7 @@
+{
+	"data": "views/data/**/*.{json,js}",
+	"decorators": "views/decorators/**/*.js",
+	"helpers": "views/helpers/**/*.js",
+	"layouts": "views/layouts/**/*.{hbs,handlebars,js}",
+	"partials": "views/partials/**/*.{hbs,handlebars,js}"
+}

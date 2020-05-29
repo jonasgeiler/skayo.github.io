@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" class="uk-background-secondary">
+	<head>
+		{{#block "head"}}
+			<meta charset="utf-8">
+
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<meta name="theme-color" content="#000">
+			<meta name="application-name" content="{{name}}" />
+			<meta name="apple-mobile-web-app-title" content="{{name}}">
+
+			<meta property="og:site_name" content="{{name}}" />
+			<meta property="og:title" content="{{name}}">
+			<meta property="og:description" content="{{job}} {{fromCountry}}">
+			<meta property="og:image" content="../assets/img/open-graph.png">
+			<meta property="og:url" content="https://me.skayo.dev">
+
+			<meta name="twitter:card" content="summary_large_image">
+			<meta name="twitter:site" content="@Skayo_">
+
+			<title>{{name}} | {{job}} {{fromCountry}}</title>
+
+			<link rel="stylesheet" type="text/css" href="../assets/scss/site.scss">
+		{{/block}}
+	</head>
+
+	<body class="uk-light">
+		{{#block "main"}}{{/block}}
+
+		<script src="../assets/js/main.js"></script>
+	</body>
+</html>

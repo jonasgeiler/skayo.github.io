@@ -2,50 +2,34 @@
 	"name": "skayo-website",
 	"version": "1.0.0",
 	"scripts": {
-		"build:scss": "sass assets/scss/site.scss dist/site.css --style compressed --no-source-map",
-		"build:js": "browserify assets/js/main.js --plugin=tinyify > dist/bundle.js",
-		"build:hbs:windows": "hbs views/index.hbs --data content.json --partial \"views/partials/*.hbs\" --helper \"%cd%/views/helpers/*.js\" --output dist/",
-		"build:hbs:default": "hbs views/index.hbs --data content.json --partial \"views/partials/*.hbs\" --helper \"$(pwd)/views/helpers/*.js\" --output dist/",
-		"build:hbs": "run-script-os --no-arguments",
-		"build:static:windows": "xcopy /Y /S static dist",
-		"build:static:default": "cp -r static/. dist/",
-		"build:static": "run-script-os --no-arguments",
-		"build": "npm run build:scss && npm run build:js & npm run build:hbs & npm run build:static",
-		"watch": "npm-watch"
-	},
-	"watch": {
-		"build:hbs": {
-			"patterns": [
-				"views"
-			],
-			"extensions": "hbs"
-		},
-		"build:scss": {
-			"patterns": [
-				"assets"
-			],
-			"extensions": "scss"
-		},
-		"build:js": {
-			"patterns": [
-				"assets"
-			],
-			"extensions": "js"
-		},
-		"build:static": {
-			"patterns": [
-				"static"
-			],
-			"extensions": "png,jpg,gif,webp,json,xml,manifest,ico,svg"
-		}
+		"dev": "parcel views/index.hbs --no-cache",
+		"build": "parcel build views/index.hbs --no-source-maps --no-cache --no-content-hash"
 	},
 	"dependencies": {
-		"browserify": "^16.5.1",
-		"hbs-cli": "^1.4.0",
-		"npm-watch": "^0.6.0",
-		"run-script-os": "^1.1.1",
-		"sass": "^1.26.6",
-		"tinyify": "^2.5.2",
-		"uikit": "3.4.6"
+		"uikit": "^3.5.1"
+	},
+	"devDependencies": {
+		"@inventory/parcel-plugin-handlebars": "^1.0.0",
+		"parcel-bundler": "^1.12.4",
+		"parcel-plugin-ogimage": "^1.2.0",
+		"parcel-plugin-pwa-manifest": "^3.0.7",
+		"sass": "^1.26.7"
+	},
+	"pwaManifest": {
+		"name": "Skayo",
+		"description": "Web Designer & Developer from Austria",
+		"themeColor": "black",
+		"display": "minimal-ui",
+		"generateIconOptions": {
+			"baseIcon": "./assets/img/logo.svg",
+			"sizes": [
+				192,
+				512
+			],
+			"resize": "contain",
+			"appleTouchIconPadding": 10,
+			"generateFavicons": true,
+			"formats": {}
+		}
 	}
 }
