@@ -1,0 +1,20 @@
+/* Error: expected selector.
+ *     ,
+ * 214 |     .uk-width-xxlarge\@s when ($deprecated = true){ width: $width-2xlarge-width; }
+ *     |                               ^
+ *     '
+ *   node_modules/uikit/src/scss/components/width.scss 214:31  @import
+ *   node_modules/uikit/src/scss/components/_import.scss 76:9  @import
+ *   node_modules/uikit/src/scss/uikit-theme.scss 7:9          @import
+ *   assets/scss/site.scss 17:9                                root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: expected selector.\a     \2577 \a 214 \2502      .uk-width-xxlarge\\@s when ($deprecated = true){ width: $width-2xlarge-width; }\a     \2502                                ^\a     \2575 \a   node_modules/uikit/src/scss/components/width.scss 214:31  @import\a   node_modules/uikit/src/scss/components/_import.scss 76:9  @import\a   node_modules/uikit/src/scss/uikit-theme.scss 7:9          @import\a   assets/scss/site.scss 17:9                                root stylesheet";
+}
