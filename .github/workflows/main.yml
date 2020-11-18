@@ -21,7 +21,7 @@ jobs:
     - name: Create CNAME 🔗
       run: echo "me.skayo.dev" > ./dist/CNAME
     - name: Deploy 🚀
-      uses: JamesIves/github-pages-deploy-action@3.5.3
+      uses: JamesIves/github-pages-deploy-action@3.7.1
       with:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         BRANCH: master
